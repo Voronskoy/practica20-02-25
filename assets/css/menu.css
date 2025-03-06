@@ -1,0 +1,33 @@
+/* .main-menu{}
+.menu-list{} */
+.menu-item {
+  display: inline-block;
+  position: relative;
+}
+.menu-link {
+  display: inline-block;
+  padding: 10px;
+  text-transform: uppercase;
+}
+.submenu {
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  display: none;
+}
+.submenu-item {
+  position: relative;
+}
+.menu-item:hover > .submenu {
+  display: block;
+}
+.submenu .submenu-item:hover > .submenu {
+  display: block;
+  top: 0;
+  left: 100%;
+}
+.menu-item:hover > a,
+.submenu-item:hover > a {
+  color: yellow;
+  text-decoration: underline;
+}
